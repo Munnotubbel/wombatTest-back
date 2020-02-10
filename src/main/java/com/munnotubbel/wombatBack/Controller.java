@@ -10,6 +10,7 @@ import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.json.JsonParser;
 import org.springframework.http.HttpRequest;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,12 +30,12 @@ import java.util.Map;
 
 import static org.springframework.data.repository.init.ResourceReader.Type.JSON;
 import static org.springframework.hateoas.IanaLinkRelations.TAG;
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api")
 public class Controller {
 
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/fetch/{username}")
     public String getHttpResponse(@PathVariable String username) throws IOException {
 
