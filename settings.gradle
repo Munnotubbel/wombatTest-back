@@ -1,0 +1,4 @@
+rootProject.name = 'wombatBack'
+
+include "client"
+include "server"

@@ -1,0 +1,16 @@
+body{background-color: black;}
+
+.main{
+  border: 2px solid red;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+form{
+  margin-bottom: 10%;
+}
+input{margin: 10px}
+
