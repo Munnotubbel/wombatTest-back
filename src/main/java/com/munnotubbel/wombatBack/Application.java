@@ -29,7 +29,7 @@ public class Application {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         // * URL below needs to match the Vue client URL and port *
-        config.setAllowedOrigins(Collections.singletonList("https://aflatwombat.netlify.com**"));
+
         config.setAllowedOrigins(Collections.singletonList("http://localhost:3000**"));
         config.setAllowedMethods(Collections.singletonList("*"));
         config.setAllowedHeaders(Collections.singletonList("*"));
