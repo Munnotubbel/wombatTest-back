@@ -49,9 +49,6 @@ public class Controller {
                 .post(body)
                 .build();
 
-
-        System.out.println("--------------------------------------------------------------------------");
-        System.out.println(client.newCall(request).execute());
         try (Response response = client.newCall(request).execute()) {
             Response res = response;
 
