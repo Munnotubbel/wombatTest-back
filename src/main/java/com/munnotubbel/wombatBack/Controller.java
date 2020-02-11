@@ -59,7 +59,7 @@ public class Controller {
 
 
     @RequestMapping("/fetch/price")
-    public String getEosValue(@PathVariable String username) throws IOException {
+    public String getEosValue() throws IOException {
 
         String url = "https://api.nomics.com/v1/currencies/ticker?key=7c8016160f57bb4a5ab8707a73810e33&ids=EOS";
 
