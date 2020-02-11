@@ -6,7 +6,7 @@ Works with Spring Boot & gradle
 Java 8 is needed to run this sample.
 
 
-Clone
+<h4>Clone<h4>
 git clone https://github.com/munnotubbel/wombatTest-back.git
 
 Run
