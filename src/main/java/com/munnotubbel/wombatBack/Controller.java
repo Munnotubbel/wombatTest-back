@@ -30,12 +30,12 @@ import java.util.Map;
 
 import static org.springframework.data.repository.init.ResourceReader.Type.JSON;
 import static org.springframework.hateoas.IanaLinkRelations.TAG;
-@CrossOrigin(origins = "http://localhost:3000")
+
 @RestController
 @RequestMapping("/api")
 public class Controller {
 
-    @CrossOrigin(origins = "http://localhost:3000")
+
     @RequestMapping("/fetch/{username}")
     public String getHttpResponse(@PathVariable String username) throws IOException {
 
@@ -55,13 +55,25 @@ public class Controller {
 
 
             return response.body().string();
-        }
+        }}
 
 
+    @RequestMapping("/fetch/price")
+    public String getEosValue(@PathVariable String username) throws IOException {
 
-    }
+        String url = "https://api.nomics.com/v1/currencies/ticker?key=7c8016160f57bb4a5ab8707a73810e33&ids=EOS";
+
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            Response res = response;
 
 
+            return response.body().string();
+        }}
 
 }
 
